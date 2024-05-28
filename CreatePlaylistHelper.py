@@ -5,6 +5,7 @@ import spotify_helper
 import googleapiclient.errors
 import google_auth_oauthlib.flow
 import googleapiclient.discovery
+from datetime import datetime
 from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
 from dotenv import load_dotenv
@@ -20,8 +21,12 @@ load_dotenv()
 
 # CONSTANTS
 SPOTIFY_USER = os.getenv('SPOTIFY_USER')
-YT_JSON_FILE_PATH = r'C:\Users\USUARIO\GR\Software Development\Projects\Bukola Automate Spotify Project (2020) - Updated [2024]\Bukola YT PJ\youtube_client_secrets.json'
-PROJECTS_PATH = r'C:\Users\USUARIO\GR\Software Development\Projects\Bukola Automate Spotify Project (2020) - Updated [2024]'
+YT_JSON_FILE_PATH = r'C:\Users\USUARIO\GR\Software Development\Projects\Automate Spotify Project (2020) - Updated [2024]\youtube_client_secrets.json'                    
+YT_TOKENS_JSON = r'C:\Users\USUARIO\GR\Software Development\Projects\Automate Spotify Project (2020) - Updated [2024]\youtube_tokens.json'
+
+# MESSAGE VARIABLES
+now = datetime.now()
+timestamp = now.strftime("%d/%m/%Y %H:%M:%S")
 
 
 
@@ -44,12 +49,18 @@ class CreatePlaylist:
 
 
         # Load credentials from file if available
-        tokens_file_path = os.path.join(PROJECTS_PATH, 'youtube_tokens.json')
+        tokens_file_path = YT_TOKENS_JSON
         creds = None
 
+
         # In case the credentials exist
-        if os.path.exists(tokens_file_path):
+        try:
             creds = Credentials.from_authorized_user_file(tokens_file_path)
+        
+        except json.JSONDecodeError as e:
+            # if the file doesn't exist, prompt a message
+            print(f"\n[{timestamp}] - No Youtube credentials found, Authorization will be required\n")
+
 
         # If there are no (valid) credentials available, let the user log in.
         if not creds or not creds.valid:

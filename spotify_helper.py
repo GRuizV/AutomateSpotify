@@ -13,7 +13,7 @@ SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
 SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
 REDIRECT_URI = 'http://localhost:5000/callback'
 SPOTIFY_AUTH_SCOPE = 'playlist-read-private%20playlist-modify-private%20playlist-modify-public' # This scope may vary depending on what will you use the app for, but this setting allows read and modify the user's playlist which is common use case
-SPOTIFY_TOKENS_JSON_FILE_PATH = r'C:\Users\USUARIO\GR\Software Development\Projects\Bukola Automate Spotify Project (2020) - Updated [2024]\spotify_tokens.json'
+SPOTIFY_TOKENS_JSON_FILE_PATH = r'C:\Users\USUARIO\GR\Software Development\Projects\Automate Spotify Project (2020) - Updated [2024]\spotify_tokens.json'
 
 
 #MESSAGE VARIABLES

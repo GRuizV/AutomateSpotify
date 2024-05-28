@@ -44,7 +44,6 @@ def callback():
     if code:
 
         try:
-
             # Try to open the JSON file to read the existing tokens
             with open(SPOTIFY_TOKENS_JSON_FILE_PATH, 'r') as f:
                 data = json.load(f)
