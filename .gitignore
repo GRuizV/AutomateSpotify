@@ -1,4 +1,5 @@
 .env
 youtube_client_secrets.json
 youtube_tokens.json
+spotify_tokens.json
 __pycache__/
