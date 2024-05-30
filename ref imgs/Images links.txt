@@ -1,1 +1,9 @@
 Youtube Client ID & Client Secret ref: https://ibb.co/z8YSSB1
+Youtube_clients JSON example: https://ibb.co/HDqLK93
+
+.env example: https://ibb.co/YZjp3Km
+spotify user ID getting: https://ibb.co/y6wL0PX
+	Spotify API ID getting link: https://developer.spotify.com/documentation/web-api/reference/get-current-users-profile
+
+
+
