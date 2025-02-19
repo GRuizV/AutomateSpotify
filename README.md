@@ -31,34 +31,39 @@ A Python application designed to transfer your liked YouTube videos into a Spoti
 
 1. **Clone the Repository:**
 
-   ```git clone https://github.com/GRuizV/AutomateSpotify.git
+   ```
+   git clone https://github.com/GRuizV/AutomateSpotify.git
    cd AutomateSpotify
 
 2. **Clone the Repository:**
 
-   ```python -m venv env
+   ```
+   python -m venv env
    source env/bin/activate  # On Windows: env\Scripts\activate
 
 3. **Install Dependencies:**
 
-   ```pip install -r requirements.txt
+   ```
+   pip install -r requirements.txt
 
 4. **Configure Environment Variables:**
     
-    -  Create a .env file in the root directory with the following content:
+    Create a .env file in the root directory with the following content:
 
-        ```SPOTIPY_CLIENT_ID=your_spotify_client_id
+        ```
+        SPOTIPY_CLIENT_ID=your_spotify_client_id
         SPOTIPY_CLIENT_SECRET=your_spotify_client_secret
         SPOTIPY_REDIRECT_URI=your_redirect_uri
         YOUTUBE_API_KEY=your_youtube_api_key
 
-    Replace 'your_spotify_client_id', 'your_spotify_client_secret', 'your_redirect_uri', and 'your_youtube_api_key' with your actual API credentials.
+Replace `your_spotify_client_id`, `your_spotify_client_secret`, `your_redirect_uri`, and `your_youtube_api_key` with your actual API credentials.
 
 5. **Run the Application:**
     
-    ```python main.py
+    ```
+    python main.py
 
-    Access the web interface by navigating to 'http://127.0.0.1:5000/' in your browser.
+Access the web interface by navigating to `http://127.0.0.1:5000/` in your browser.
 
 ## **Usage**
 
@@ -79,11 +84,11 @@ A Python application designed to transfer your liked YouTube videos into a Spoti
 
 ## **Future Enhancements**
 
-- Automated Scheduling: Implement a scheduling feature to update the Spotify playlist periodically without manual intervention.
+- **Automated Scheduling:** Implement a scheduling feature to update the Spotify playlist periodically without manual intervention.
 
-- Enhanced Matching Algorithm: Improve the song matching algorithm to increase accuracy, considering factors like song duration and popularity.
+- **Enhanced Matching Algorithm:** Improve the song matching algorithm to increase accuracy, considering factors like song duration and popularity.
 
-- User Preferences: Allow users to set preferences for playlist naming conventions, privacy settings, and more.
+- **User Preferences:** Allow users to set preferences for playlist naming conventions, privacy settings, and more.
 
 
 ## **Contributing**
